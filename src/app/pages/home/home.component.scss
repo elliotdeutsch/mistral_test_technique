@@ -26,6 +26,7 @@ app-header {
         max-width: 500px;
         background: -webkit-linear-gradient(white, #333333);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: slide-up 1.5s ease-out;
     }
@@ -72,36 +73,41 @@ app-header {
             width: 20px;
         }
 
-        .generate-btn {
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            padding: 5px 10px;
-            border-radius: 25px;
-            background: #33364D;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-direction: row;
-            border: 1px solid #A6A6A6;
-            height: 40px;
+    }
+}
 
-            &:hover {
-                background: #505474;
-                border: 1px solid #A6A6A6;
-                transition: all 0.5s ease;
-            }
+.generate-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px 10px;
+    border-radius: 25px;
+    background: #33364D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    border: 1px solid #A6A6A6;
+    height: 40px;
 
-            span {
-                font-weight: 500;
-                color: #e1e1e1;
-            }
+    &:hover {
+        background: #505474;
+        border: 1px solid #A6A6A6;
+        transition: all 0.5s ease;
+    }
 
-            .arrow-image {
-                width: 15px;
-            }
-        }
+    span {
+        font-weight: 500;
+        color: #e1e1e1;
+    }
+
+    .arrow-image {
+        width: 15px;
+    }
+
+    &.join {
+        position: relative !important;
     }
 }
 
@@ -175,7 +181,8 @@ app-header {
 
 .first-section,
 .second-section,
-.third-section {
+.third-section,
+.fourth-section {
     width: 100%;
     height: fit-content;
     padding: 50px;
@@ -186,7 +193,7 @@ app-header {
     h2 {
         font-size: 30px;
         font-weight: 600;
-        color: #b9b9b9;
+        color: #d1d1d1;
         margin-bottom: 20px;
         text-align: center;
     }
@@ -246,9 +253,33 @@ app-header {
 }
 
 .second-section,
-.third-section {
+.third-section,
+.fourth-section {
     margin-top: 100px;
     gap: 25px;
+    position: relative;
+}
+
+.fourth-section {
+    overflow: hidden;
+    height: 400px;
+    margin-bottom: -150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 10px !important;
+
+    h2 {
+        margin: 0 !important;
+        z-index: 9;
+    }
+
+    a {
+        z-index: 9;
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .third-btn {
@@ -262,6 +293,13 @@ app-header {
     align-items: center;
     gap: 10px;
     animation: slide-up 1.5s ease-out;
+}
+
+.mistral-outline {
+    width: 100%;
+    position: absolute;
+    left: -10%;
+    top: 0%;
 }
 
 @keyframes fade-in {
@@ -332,6 +370,10 @@ app-header {
             margin-right: 0 !important;
         }
     }
+
+    h2 {
+        font-size: 24px !important;
+    }
 }
 
 
@@ -374,7 +416,8 @@ app-header {
     }
 
     .second-section,
-    .third-section {
+    .third-section,
+    .fourth-section {
         padding: 20px;
 
         .main-btn {
@@ -382,6 +425,15 @@ app-header {
                 font-size: 20px;
                 width: 100%;
             }
+        }
+    }
+
+    .fourth-section {
+        max-height: 230px;
+
+        h2 {
+            font-size: 20px;
+            max-width: 80dvw;
         }
     }
 
@@ -393,6 +445,15 @@ app-header {
         span {
             display: none;
         }
+
+        &.join {
+            position: relative !important;
+            width: fit-content !important;
+
+            span {
+                display: block;
+            }
+        }
     }
 
     .input-group {
@@ -400,10 +461,42 @@ app-header {
             text-overflow: ellipsis;
         }
     }
+
+    .mistral-outline {
+        left: -9.5% !important;
+        top: 80px !important;
+    }
 }
 
 @media screen and (max-width: 350px) {
     .first-section {
         margin-top: 200px !important;
+    }
+
+    .fourth-section {
+        max-height: 280px;
+    }
+
+    .mistral-outline {
+        left: -4.5% !important;
+        top: 120px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    .main-btn {
+        &.huge {
+            font-size: 20px;
+            width: 100%;
+            height: fit-content !important;
+
+            &:hover {
+                width: 100% !important;
+                height: fit-content !important;
+                transform: translateY(0) !important;
+            }
+        }
     }
 }
