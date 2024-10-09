@@ -1,0 +1,61 @@
+<div class="page-layout">
+    <app-header></app-header>
+    <div style="position: relative;">
+        <div class="hide-overflow">
+            <div class="homemade-circle"></div>
+        </div>
+        <div class="title-section">
+            <h1>Une IA générative ouverte et portable pour les développeurs et les entreprises</h1>
+            <div class="input-group">
+                <input type="text" name="" id="animated-input" class="generative-input"
+                    placeholder="Comment créer une app en React?">
+                <img src="assets/img/ai-icon.svg" alt="Icone d'ia" aria-hidden="true" class="ai-image">
+                <a href="https://chat.mistral.ai/" target="_blank">
+                    <button class="generate-btn">
+                        <span>Générer</span>
+                        <img src="assets/img/next-arrow.svg" alt="Icône de flèche" class="arrow-image">
+                    </button>
+                </a>
+            </div>
+            <a href="https://mistral.ai/fr/contact/" target="_blank">
+                <button class="third-btn">
+                    <span>Contacter le service commercial</span>
+                    <img src="assets/img/mail.svg" alt="Icône de contact">
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="first-section">
+        <h2>Les forces de MistralAI</h2>
+        <div class="cards-layout">
+            <div class="transparent-card">
+                <h3>Accessibilité Open Source</h3>
+                <span>Profitez des modèles open source de Mistral sous licence Apache 2.0. Téléchargez, modifiez, et
+                    déployez nos modèles selon vos besoins, pour une flexibilité maximale.</span>
+            </div>
+            <div class="transparent-card">
+                <h3>Vitesse et Efficacité</h3>
+                <span>Les modèles Mistral, comme Mixtral 8x7B, offrent des performances jusqu'à 6 fois plus rapides
+                    grâce à une architecture innovante, tout en restant économiques.</span>
+            </div>
+            <div class="transparent-card">
+                <h3>Transparence et Collaboration</h3>
+                <span>Mistral AI favorise un développement ouvert et collaboratif, où la communauté peut contribuer
+                    activement à l'innovation et à l’amélioration des modèles.</span>
+            </div>
+        </div>
+    </div>
+    <div class="second-section">
+        <h2>Ils nous font confiance</h2>
+        <app-companies-carousel></app-companies-carousel>
+    </div>
+    <div class="third-section">
+        <h2>Votre prochaine grande idée n'est qu'à un prompt</h2>
+        <div>
+            <a href="https://chat.mistral.ai/" target="_blank">
+                <button class="main-btn huge">Démarrer un Chat</button>
+            </a>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

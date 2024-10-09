@@ -1,0 +1,25 @@
+<div class="header" [class.scrolled]="scrolled">
+    <div class="logo">
+        <div class="burger-block">
+            <label for="check" class="custom-burger">
+                <input type="checkbox" id="check" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <a href="">
+            <img src="assets/img/mistral-logo.svg" alt="Mistral AI">
+        </a>
+    </div>
+    <div class="main-links hide-tablet hide-mobile" [class.scrolled]="scrolled">
+        @for (link of links; track $index) {
+        <a href="{{link.url}}" class="main-link">{{link.label}}</a>
+        }
+    </div>
+    <div class="actions">
+        <a href="https://chat.mistral.ai/" target="_blank">
+            <button class="main-btn">Parler au chat</button>
+        </a>
+    </div>
+</div>
