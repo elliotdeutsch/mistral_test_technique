@@ -7,7 +7,6 @@
 
 .main {
     min-height: 100dvh;
-    // background-image: radial-gradient(113% 91% at 17% -2%, #230D00FF 2%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #190C38FF 18%, #FF000000 99%), radial-gradient(142% 91% at -6% 74%, #1B0531FF 1%, #FF000000 99%), radial-gradient(142% 91% at 111% 84%, #EB5829FF 0%, #A03C1CFF 51%, #DF4E22FF 100%);
     background-image: radial-gradient(113% 91% at 17% -2%, #050013FF 0%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #190C38FF 18%, #FF000000 99%), radial-gradient(142% 91% at -6% 74%, #1B0531FF 1%, #FF000000 99%), radial-gradient(142% 91% at 111% 84%, #EB5829FF 0%, #A03C1CFF 51%, #DF4E22FF 100%);
     overflow-x: hidden !important;
 }
@@ -37,7 +36,6 @@ button {
         box-shadow: 0px 0px 10px 10px #ee792f1a;
     }
 
-    // Création de la bordure avec animation
     &::before {
         content: "";
         position: absolute;
@@ -52,7 +50,6 @@ button {
         animation: borderRotate 5s linear infinite;
     }
 
-    // Définition de la couleur de fond du bouton
     &::after {
         content: "";
         position: absolute;
@@ -74,7 +71,6 @@ button {
     display: block;
 }
 
-// Animation pour faire tourner le gradient autour du bouton
 @keyframes borderRotate {
     0% {
         transform: rotate(0deg);

@@ -18,10 +18,10 @@ import {
 export class HeaderComponent implements OnInit, OnDestroy {
   public links = [
     { label: 'A propos', url: '/accueil' },
-    { label: 'Documentation', url: '/accueil' },
-    { label: 'Personnalisation', url: '/accueil' },
-    { label: 'Société', url: '/accueil' },
-    { label: 'Actualités', url: '/accueil' },
+    { label: 'Documentation', url: 'https://docs.mistral.ai/' },
+    { label: 'Personnalisation', url: 'https://console.mistral.ai/' },
+    { label: 'Société', url: 'https://mistral.ai/fr/company/' },
+    { label: 'Actualités', url: 'https://mistral.ai/fr/news/' },
   ];
 
   public isMenuOpen = false;

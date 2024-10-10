@@ -44,9 +44,9 @@
                 content: "";
                 position: absolute;
                 left: 0;
-                bottom: -2px; // ajuster la position de l'underline
+                bottom: -2px;
                 width: 100%;
-                height: 2px; // ajuster l'épaisseur de l'underline
+                height: 2px;
                 background-color: #EB5829;
                 transform: scaleX(0);
                 transform-origin: left;
@@ -58,7 +58,6 @@
             }
 
             &:hover {
-                // add neon effect
                 text-shadow: #EB5829 0px 0px 20px, 1px 1px 20px #EB5829;
             }
         }
