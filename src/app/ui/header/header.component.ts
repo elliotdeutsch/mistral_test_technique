@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  HostListener,
+  OnDestroy,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,13 +17,15 @@ import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   public links = [
-    { label: 'Documentation', url: '/accueil' },
-    { label: 'Technologie', url: '/accueil' },
     { label: 'A propos', url: '/accueil' },
+    { label: 'Documentation', url: '/accueil' },
+    { label: 'Personnalisation', url: '/accueil' },
     { label: 'Société', url: '/accueil' },
     { label: 'Actualités', url: '/accueil' },
   ];
 
+  public isMenuOpen = false;
+  @Output() public menuToggled = new EventEmitter<boolean>(false);
   public scrolled = false;
 
   constructor() {}
@@ -39,5 +48,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
       return;
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  public toggleMenu($event: Event) {
+    $event.stopPropagation();
+    setTimeout(() => {
+      this.isMenuOpen = !this.isMenuOpen;
+      this.menuToggled.emit(this.isMenuOpen);
+    }, 50);
   }
 }

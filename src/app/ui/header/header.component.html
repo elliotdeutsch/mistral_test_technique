@@ -1,13 +1,21 @@
 <div class="header" [class.scrolled]="scrolled">
     <div class="logo">
-        <div class="burger-block">
-            <label for="check" class="custom-burger">
+        <!-- <div class="burger-block" (click)="toggleMenu($event)">
+            <label for="check" class="custom-burger" (click)="$event.stopPropagation()">
                 <input type="checkbox" id="check" />
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
+        </div> -->
+        <div class="burger-block" (click)="toggleMenu($event)">
+            <div class="custom-burger" [class.open]="isMenuOpen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+
         <a href="">
             <img src="assets/img/mistral-logo.svg" alt="Mistral AI">
         </a>

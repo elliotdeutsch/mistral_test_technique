@@ -1,5 +1,6 @@
 <div class="page-layout">
-    <app-header></app-header>
+    <app-header (menuToggled)="toggleMenu($event)"></app-header>
+    <app-menu *ngIf="menuToggled"></app-menu>
     <div style="position: relative;">
         <div class="hide-overflow">
             <div class="homemade-circle"></div>

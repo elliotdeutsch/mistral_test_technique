@@ -23,12 +23,13 @@ app-header {
     position: absolute;
 
     h1 {
-        max-width: 500px;
+        max-width: 45%;
         background: -webkit-linear-gradient(white, #333333);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: slide-up 1.5s ease-out;
+        font-size: 35px;
     }
 
     .input-group {
@@ -206,7 +207,7 @@ app-header {
 
         .transparent-card {
             backdrop-filter: blur(30px);
-            background: linear-gradient(279.18deg, rgba(2, 3, 5, 0.38) 24.57%, rgba(154, 72, 39, 0.38) 79.22%);
+            background: linear-gradient(79.18deg, rgba(2, 3, 5, 0.38) 24.57%, rgba(154, 72, 39, 0.38) 79.22%);
             max-width: 600px;
             border-radius: 15px;
             padding: 20px;
@@ -238,7 +239,7 @@ app-header {
             &:nth-child(even) {
                 margin-right: 0;
                 margin-left: 400px;
-                background: linear-gradient(79.18deg, rgba(2, 3, 5, 0.38) 24.57%, rgba(154, 72, 39, 0.38) 79.22%);
+                background: linear-gradient(279.18deg, rgba(2, 3, 5, 0.38) 24.57%, rgba(154, 72, 39, 0.38) 79.22%);
 
                 &:hover {
                     animation: floating-inverted 4s ease-out infinite;

@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../ui/header/header.component';
-import { interval, Subscription } from 'rxjs';
 import { CompaniesCarouselComponent } from '../../ui/companies-carousel/companies-carousel.component';
 import { FooterComponent } from '../../ui/footer/footer.component';
+import { MenuComponent } from '../../ui/menu/menu.component';
 
 @Component({
   selector: 'app-home',
@@ -15,9 +15,11 @@ import { FooterComponent } from '../../ui/footer/footer.component';
     HeaderComponent,
     CompaniesCarouselComponent,
     FooterComponent,
+    MenuComponent,
   ],
 })
 export class HomeComponent implements AfterViewInit {
+  public menuToggled = false;
   constructor(private el: ElementRef) {}
 
   ngAfterViewInit() {
@@ -44,5 +46,9 @@ export class HomeComponent implements AfterViewInit {
     );
 
     cards.forEach((card: any) => observer.observe(card));
+  }
+
+  public toggleMenu($event: any) {
+    this.menuToggled = $event;
   }
 }
