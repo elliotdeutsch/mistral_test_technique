@@ -237,6 +237,15 @@ app-header {
             span {
                 color: #b5b5b5;
                 text-align: justify;
+
+                .url-link {
+                    color: #c9c9c9;
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: #ffffff;
+                    }
+                }
             }
 
             &:nth-child(even) {
@@ -581,6 +590,11 @@ app-header {
             &.huge {
                 font-size: 20px;
                 width: 100%;
+
+                &:hover {
+                    width: 100%;
+                    transform: translateY(0);
+                }
             }
         }
     }
