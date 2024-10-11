@@ -33,9 +33,9 @@ export class HomeComponent implements AfterViewInit, OnDestroy, OnInit {
   private personaTimeout: any;
   private fadeTimeout: any; // Timer pour le fade-out et la suppression
   public isHovered = false;
-  private remainingTime = 5000;
   private startTime = 0;
-  private fadeRemainingTime = 4000; // Temps initial pour le fade-out
+  public remainingTime = 5000;
+  public fadeRemainingTime = 4000; // Temps initial pour le fade-out
 
   public personaeMessages = [
     {
@@ -98,6 +98,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy, OnInit {
 
     cards.forEach((card: any) => observer.observe(card));
   }
+
   ngOnDestroy() {
     clearTimeout(this.personaTimeout);
     clearTimeout(this.typewriterTimeout);
@@ -151,10 +152,17 @@ export class HomeComponent implements AfterViewInit, OnDestroy, OnInit {
   public pauseRotation() {
     this.isHovered = true;
     clearTimeout(this.personaTimeout);
-    clearTimeout(this.typewriterTimeout);
+    /* clearTimeout(this.typewriterTimeout); */
     clearTimeout(this.fadeTimeout);
     this.remainingTime -= Date.now() - this.startTime;
     this.fadeRemainingTime -= Date.now() - this.startTime;
+
+    if (this.remainingTime < 1) {
+      this.remainingTime = 5000;
+    }
+    if (this.fadeRemainingTime < 1) {
+      this.fadeRemainingTime = 4000;
+    }
   }
 
   public resumeRotation() {
